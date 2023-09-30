@@ -10,6 +10,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+        /* Add this style to initially hide the contact section */
+        .contact-section {
+            display: none;
+        }
+    </style>
+
 </head>
 <body>
     <div id="particles"></div>
@@ -39,10 +46,12 @@
             </ul>
         </div>
     </section>
+
     <section class="about" id="about">
         <div class="container">
             <h2>Hi, I am Abhishek Issac 👀</h2>
             <h3>Welcome to my personal website.</h3>
+            <!-- ... Rest of the about section ... -->
             <p>I'm from Wayanad, Ambalavayal</p>
             <p>favorite color is neon green (though it might change sometime).</p> 
             <p>I'm currently studying in the 9th standard at Assumption AHS Bathery.</p>\n\n\n
@@ -53,10 +62,12 @@
             <p>Apart from all that what I love the most is to watch HACKING movies & other Crazy stuffs like 🤖 </p>
             <br>
             <p class"astrophile-meaning"><small>*astrophile- a person who is deeply in love with stars.</small></p>
+            <!-- ... Rest of the about section ... -->
         </div>
     </section>
 
-    <section class="contacts" id="contacts">
+    <!-- Add this div to overlay the content and show contact info when clicked -->
+    <div id="contactOverlay" onclick="toggleContact()" class="contact-section">
         <div class="container">
             <h2>Contact Me</h2>
             <p>If you'd like to get in touch with me, feel free to reach out through the following methods:</p>
@@ -65,14 +76,18 @@
                 <li>Email: abhishekissac0@gmail.com</li>
                 <li>Phone: +918113828725</li>
                 <p>My Nearest Friends Contacts for emergency(purpose)</p>
+                <!-- ... Other contacts ... -->
                 <li>Abhinav TR: 9961323426</li>
                 <li>Albin Sanil: 8157832595</li>
                 <p> Parent </p>
                 <li> Dad: 9946183041 (Emergency)</li>
+                <!-- ... Other contacts ... -->
             </ul>
         </div>
-    </section>
-    
+    </div>
+
+    <!-- ... Rest of your existing code ... -->
+
     <footer>
     <div class="container">
         <a href="https://www.youtube.com/playlist?list=PL9nqZ8bkLgsmey2G03K1tplG20GuR4be5" target="_blank">Check out my YouTube playlist!</a>
@@ -83,5 +98,32 @@
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/part-conf.js"></script>
     <script src="assets/js/writer.js"></script>
+
+    <script>
+        // Function to toggle contact section visibility
+        function toggleContact() {
+            var contactSection = document.querySelector('.contact-section');
+            contactSection.style.display = (contactSection.style.display === 'none' || contactSection.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+
 </body>
-                                                                                            </html>
+</html>
+
+<!-- Solar System HTML and CSS -->
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+      /* ... Solar system styles ... */
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+</html>
